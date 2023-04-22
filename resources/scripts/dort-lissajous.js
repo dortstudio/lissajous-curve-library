@@ -70,25 +70,18 @@
 */
 
 //onload = function() { draw();};
-function init() {
-    var canvas = document.getElementById('fld');
+function initLC(obj, canvas) {
     if (!canvas || !canvas.getContext) { return false; }
     var ctx = canvas.getContext('2d');
-    //draw(ctx);
 
-    draw(canvas, ctx);
-    setInterval(draw, 200, canvas, ctx);
+    setInterval(drawLC, 100, obj, canvas, ctx);
 
 }
 
-var increment = 0;
-var incrementPlus = 0.008;
 
-function draw(canvas, ctx) {
+function drawLC(obj, canvas, ctx) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    //console.log("asdgfasss");
-    //ctx.beginPath();
     var i = 3 + 0.002;
     var k = 5 + 0.002;
     var n = 50;
@@ -117,7 +110,7 @@ function draw(canvas, ctx) {
             ctx.strokeStyle = 'rgb(0, 255, 0)';
         }
 
-        var x = (radius * Math.sin((t)*((iOffset) * (jOffset)+increment)));
+        var x = (radius * Math.sin((t)*((iOffset) * (jOffset)+obj.increment)));
         var y = (radius * Math.cos((t)*((kOffset) * (jOffset))));
         
         ctx.lineTo((Base.x + x)*Base.xSize, (Base.y - y)*Base.ySize);
@@ -126,8 +119,10 @@ function draw(canvas, ctx) {
         ctx.closePath();
         
     }
-    increment = increment+incrementPlus;
-    //console.log(increment);
+    obj.increment = obj.increment + obj.incrementPlus;
 }
 
-init();
+var curveObj01 = {};
+curveObj01.increment = 0;
+curveObj01.incrementPlus = 0.008;
+initLC(curveObj01, document.getElementById('dort-canvas-01'));
