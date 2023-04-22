@@ -85,14 +85,14 @@ function draw(canvas, ctx) {
 
     console.log("asdgfasss");
     //ctx.beginPath();
-    var i = 3;
-    var k = 4;
-    var jMax = 2;
+    var i = 3 + 0.002;
+    var k = 5 + 0.002;
     var n = 50;
+    var t = 1;
     var Base = { x: 100, y: 100, xSize: 2, ySize: 2};
     //ctx.moveTo(Base.x*Base.xSize, Base.y*Base.ySize);
     var radius = 70;
-    for (j = 0; j <= jMax * Math.PI; j += Math.PI / n / i) {
+    for (j = 0; j <= 2 * Math.PI; j += Math.PI / n / i) {
         
         var iOffset = i;
         var kOffset = k;
@@ -103,7 +103,7 @@ function draw(canvas, ctx) {
         ctx.moveTo((Base.x + x)*Base.xSize, (Base.y - y)*Base.ySize);
 
 
-        if(j < jMax * Math.PI /2){
+        if(j < Math.PI){
             //console.log("a");
             ctx.strokeStyle = 'rgb(255, 0, 0)';
         } else {
@@ -111,8 +111,8 @@ function draw(canvas, ctx) {
             ctx.strokeStyle = 'rgb(0, 255, 0)';
         }
 
-        var x = (radius * Math.sin(((iOffset) * (jOffset))));
-        var y = (radius * Math.cos((((kOffset) + 1) * jOffset)));
+        var x = (radius * Math.sin((t)*((iOffset) * (jOffset))));
+        var y = (radius * Math.cos((t)*((kOffset) * (jOffset))));
         
         ctx.lineTo((Base.x + x)*Base.xSize, (Base.y - y)*Base.ySize);
         ctx.lineWidth = 4;
