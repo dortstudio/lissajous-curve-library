@@ -78,16 +78,22 @@ function drawLC(obj, canvas, ctx) {
 var curveObj01 = {};
 curveObj01.xStep = 2;
 curveObj01.yStep = 3;
+curveObj01.strokeStyle01 = 'rgb(21, 32, 35)';
+curveObj01.strokeStyle02 = 'rgb(88, 188, 163)';
 initLissajousCurve(curveObj01, document.getElementById('dort-canvas-01'));
 
 
 var curveObj02 = {};
 curveObj02.xStep = 3;
 curveObj02.yStep = 4;
+curveObj02.strokeStyle01 = 'rgb(21, 32, 35)';
+curveObj02.strokeStyle02 = 'rgb(88, 188, 163)';
 initLissajousCurve(curveObj02, document.getElementById('dort-canvas-02'));
 
 
 var curveObj03 = {};
 curveObj03.xStep = 4;
 curveObj03.yStep = 5;
+curveObj03.strokeStyle01 = 'rgb(21, 32, 35)';
+curveObj03.strokeStyle02 = 'rgb(88, 188, 163)';
 initLissajousCurve(curveObj03, document.getElementById('dort-canvas-03'));
