@@ -75,15 +75,19 @@ function init() {
     if (!canvas || !canvas.getContext) { return false; }
     var ctx = canvas.getContext('2d');
     //draw(ctx);
+
     draw(canvas, ctx);
-    setInterval(draw, 1000, canvas, ctx);
+    setInterval(draw, 200, canvas, ctx);
 
 }
+
+var increment = 0;
+var incrementPlus = 0.008;
 
 function draw(canvas, ctx) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    console.log("asdgfasss");
+    //console.log("asdgfasss");
     //ctx.beginPath();
     var i = 3 + 0.002;
     var k = 5 + 0.002;
@@ -91,6 +95,8 @@ function draw(canvas, ctx) {
     var t = 1;
     var Base = { x: 100, y: 100, xSize: 2, ySize: 2};
     //ctx.moveTo(Base.x*Base.xSize, Base.y*Base.ySize);
+
+
     var radius = 70;
     for (j = 0; j <= 2 * Math.PI; j += Math.PI / n / i) {
         
@@ -111,7 +117,7 @@ function draw(canvas, ctx) {
             ctx.strokeStyle = 'rgb(0, 255, 0)';
         }
 
-        var x = (radius * Math.sin((t)*((iOffset) * (jOffset))));
+        var x = (radius * Math.sin((t)*((iOffset) * (jOffset)+increment)));
         var y = (radius * Math.cos((t)*((kOffset) * (jOffset))));
         
         ctx.lineTo((Base.x + x)*Base.xSize, (Base.y - y)*Base.ySize);
@@ -120,8 +126,8 @@ function draw(canvas, ctx) {
         ctx.closePath();
         
     }
-    //ctx.stroke();
-
+    increment = increment+incrementPlus;
+    //console.log(increment);
 }
 
 init();
