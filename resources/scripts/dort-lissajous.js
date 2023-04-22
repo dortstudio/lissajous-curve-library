@@ -9,11 +9,11 @@
 //////////////
 // CANVAS
 // LISSAJOUS CURVE
-// creates a canvas
+// creates an animated canvas
+//
 // Example
-// initLissajousCurve()
-// returns canvas on div
-
+// initLissajousCurve(curveObj01, document.getElementById('dort-canvas-01'))
+// animates a canvas on with the id named 'dortcanvas-01' with the settings in curveObj01.
 
 //onload = function() { draw();};
 function initLissajousCurve(obj, canvas) {
@@ -36,7 +36,6 @@ function initLissajousCurve(obj, canvas) {
 
 }
 
-
 function drawLC(obj, canvas, ctx) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -45,7 +44,6 @@ function drawLC(obj, canvas, ctx) {
     var n = obj.n;
     var scale = 1;
     var base = obj.base
-
 
     var radius = obj.radius;
     for (j = 0; j <= 2 * Math.PI; j += Math.PI / n / xStep) {
@@ -82,14 +80,12 @@ curveObj01.strokeStyle01 = 'rgb(21, 32, 35)';
 curveObj01.strokeStyle02 = 'rgb(88, 188, 163)';
 initLissajousCurve(curveObj01, document.getElementById('dort-canvas-01'));
 
-
 var curveObj02 = {};
 curveObj02.xStep = 3;
 curveObj02.yStep = 4;
 curveObj02.strokeStyle01 = 'rgb(21, 32, 35)';
 curveObj02.strokeStyle02 = 'rgb(88, 188, 163)';
 initLissajousCurve(curveObj02, document.getElementById('dort-canvas-02'));
-
 
 var curveObj03 = {};
 curveObj03.xStep = 4;
