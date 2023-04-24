@@ -12,7 +12,7 @@ You will need
 
 ## Lissajous curve library JavaScript file
 
-The Javascript file `dort-lissajous-curve.js` can be found in `/app/utils/Geometric`
+The Javascript file `dort-lissajous-curve.js` can be found in `app/utils/Geometric/`
 
 Example
 
