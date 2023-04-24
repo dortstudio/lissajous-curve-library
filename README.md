@@ -12,11 +12,11 @@ You will need
 
 ## Lissajous curve library JavaScript file
 
-The Javascript file can be found in `/resources/scripts/lissajous-curve-library.js`
+The Javascript file `dort-lissajous-curve.js` can be found in `/app/utils/Geometric`
 
 Example
 
-    <script src="resources/scripts/dort-lissajous.js?cachebust=1351354" type="text/javascript"></script>
+    <script src="app/utils/Geometric/dort-lissajous-curve.js?ver=4" type="text/javascript"></script>
 
 
 ## Blank canvas
