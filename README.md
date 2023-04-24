@@ -59,7 +59,7 @@ This library is very flexible and settings can be defined depending on your proj
 
 `obj.n` the number of lines in a curve (default is 50).
 
-`obj.hidpi` whether high-definition screens should be rendered (default is false).
+`obj.hidpi` whether high-definition (retina) screens should be rendered at double DPI (default is false).
 
 `obj.canvasWidth` the pixel width of a canvas (default is 400).
 
