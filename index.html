@@ -137,9 +137,13 @@
             </br>
             Lissajous curve examples.
         </p>
-        <canvas id="dort-canvas-01" ></canvas>
-        <canvas id="dort-canvas-02" width="400" height="400"></canvas>
-        <canvas id="dort-canvas-03" width="400" height="400"></canvas>
+        <canvas id="dort-canvas-01"></canvas>
+        <br>
+        <br>
+        <canvas id="dort-canvas-02"></canvas>
+        <br>
+        <br>
+        <canvas id="dort-canvas-03"></canvas>
 
         <script src="resources/scripts/dort-lissajous.js?cachebust=1351354" type="text/javascript"></script>
 
@@ -151,17 +155,19 @@
                 var curveObj01 = {};
                 curveObj01.xStep = 2;
                 curveObj01.yStep = 3;
-                curveObj01.speed = 0.016;
+                curveObj01.hidpi = true;
                 curveObj01.canvasWidth = 400;
                 curveObj01.canvasHeight = 400;
                 curveObj01.strokeStyle01 = 'rgb(21, 32, 35)';
                 curveObj01.strokeStyle02 = 'rgb(88, 188, 163)';
                 initLissajousCurve(curveObj01, document.getElementById('dort-canvas-01'));
-                /*
+
                 var curveObj02 = {};
                 curveObj02.xStep = 3;
                 curveObj02.yStep = 4;
-                curveObj02.speed = 0.016;
+                curveObj02.hidpi = true;
+                curveObj02.canvasWidth = 400;
+                curveObj02.canvasHeight = 400;
                 curveObj02.strokeStyle01 = 'rgb(21, 32, 35)';
                 curveObj02.strokeStyle02 = 'rgb(88, 188, 163)';
                 initLissajousCurve(curveObj02, document.getElementById('dort-canvas-02'));
@@ -169,11 +175,13 @@
                 var curveObj03 = {};
                 curveObj03.xStep = 4;
                 curveObj03.yStep = 5;
-                curveObj03.speed = 0.016;
+                curveObj03.hidpi = true;
+                curveObj03.canvasWidth = 400;
+                curveObj03.canvasHeight = 400;
                 curveObj03.strokeStyle01 = 'rgb(21, 32, 35)';
                 curveObj03.strokeStyle02 = 'rgb(88, 188, 163)';
                 initLissajousCurve(curveObj03, document.getElementById('dort-canvas-03'));
-                */
+
             }
 
             window.onload = loadedPageForCanvas;

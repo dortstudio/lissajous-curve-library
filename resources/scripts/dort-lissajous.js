@@ -24,7 +24,7 @@ function initLissajousCurve(obj, canvas) {
     obj.increment = obj.increment || 0;
     obj.xStep = obj.xStep || 2;
     obj.yStep = obj.yStep || 5;
-    obj.speed = obj.speed || 0.008;
+    obj.speed = obj.speed || 0.016;
     obj.n = obj.n || 50;
     obj.hidpi = false;
     obj.canvasWidth = obj.canvasWidth || 400;
