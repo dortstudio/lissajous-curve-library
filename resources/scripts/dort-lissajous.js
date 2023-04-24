@@ -21,18 +21,18 @@ function initLissajousCurve(obj, canvas) {
     var ctx = canvas.getContext('2d');
 
 
-    obj.increment = obj.increment || 0;
     obj.xStep = obj.xStep || 2;
     obj.yStep = obj.yStep || 5;
     obj.speed = obj.speed || 0.016;
     obj.n = obj.n || 50;
-    obj.hidpi = false;
+    obj.hidpi = obj.hidpi || false;
     obj.canvasWidth = obj.canvasWidth || 400;
     obj.canvasHeight = obj.canvasHeight || 400;
     obj.xMid = obj.xMid || obj.canvasWidth / 2;
     obj.yMid = obj.yMid || obj.canvasHeight / 2;
     obj.radius = obj.radius || 190;
     obj.lineWidth = obj.lineWidth || 4;
+    obj.increment = obj.increment || 0;
     obj.intervalAmount = obj.intervalAmount || 50;
     obj.strokeStyle01 = obj.strokeStyle01 || 'rgb(255, 0, 0)';
     obj.strokeStyle02 = obj.strokeStyle02 || 'rgb(0, 255, 0)';
