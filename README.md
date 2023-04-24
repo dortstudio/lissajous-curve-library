@@ -34,7 +34,7 @@ The minimal code you need is
 
 This will produce a canvas that is 400x400px wide with a green and red curve.
 
-An example of more settings looks like 
+An example of more detailed settings 
 
     var curveObj01 = {};
     curveObj01.xStep = 4;
@@ -47,7 +47,9 @@ An example of more settings looks like
     initLissajousCurve(curveObj01, document.getElementById('dort-canvas-01'));
 
 ***
-# About the settings
+# Setting details
+
+This library is very flexible and settings can be defined depending on your project.
 
 `obj.xStep` the number of vertical steps (default is 2).
 
