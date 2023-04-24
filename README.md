@@ -1,5 +1,5 @@
-# About lissajous curve library
-This is a simple JavaScript library to generate Lissajous curves using canvas.
+# Dort Studio lissajous curve library
+This JavaScript library helps you generate Lissajous curves using HTML canvas.
 
 A Lissajous curve is a shape that comprises of an intersection of two perpendicular sinusoidal waves. They often represent the left and right channels in audio.
 
