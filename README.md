@@ -1,34 +1,32 @@
 # About lissajous curve library
-=====
 This is a simple JavaScript library to generate Lissajous curves using canvas.
 
 A Lissajous curve is a shape that comprises of an intersection of two perpendicular sinusoidal waves. They often represent the left and right channels in audio.
 
 ***
-# How to use this library
-=====
-There are three parts to this library
-1. The Lissajous curve library JavaScript file that contains the main script to initialise and animate the curves
-2. A blank canvas to apply the curve to
+# Getting started
+You will need
+1. The JavaScript file that contains the main script to initialise and animate the curves
+2. The blank canvas to apply the curve to
 3. The JavaScript that defines the settings for each curve and targets a blank canvas
 
-## 1. Lissajous curve library JavaScript file
+## Lissajous curve library JavaScript file
 
 The Javascript file can be found in `/resources/scripts/lissajous-curve-library.js`
 
-Embedding example
+Example
 
     <script src="resources/scripts/dort-lissajous.js?cachebust=1351354" type="text/javascript"></script>
 
 
-## 2. Blank canvas
+## Blank canvas
 Each canvas needs a unique ID.
 
     <canvas id="dort-canvas-01"></canvas>
 
 You can have multiple canvases on each page, and they can have unique lissajous curve settings. But each canvas needs a unique ID and need to be initialised individually.
 
-## 3. Defining the settings
+## Defining the lissajous curve animation settings
 The minimal code you need is
 
     var curveObj01 = {};
@@ -50,20 +48,33 @@ An example of more settings looks like
 
 ***
 # About the settings
-=====
 
 `obj.xStep` the number of vertical steps (default is 2).
+
 `obj.yStep` the number of horizontal steps (default is 5).
+
 `obj.speed` the speed at which the curve rotates (default is 0.016).
+
 `obj.n` the number of lines in a curve (default is 50).
+
 `obj.hidpi` whether high-definition screens should be rendered (default is false).
-`obj.canvasWidth` the pixel width of a canvas (default is 400);
-`obj.canvasHeight` the pixel height of a canvas (default is 400);;
+
+`obj.canvasWidth` the pixel width of a canvas (default is 400).
+
+`obj.canvasHeight` the pixel height of a canvas (default is 400).
+
 `obj.xMid` the horizontal centre of the curve radius (defualt is the centre of the canvas).
+
 `obj.yMid` the vertical centre of the curve radius (defualt is the centre of the canvas).
+
 `obj.radius` the size of the radius (default is 190).
+
 `obj.lineWidth` the thickness of the line (default is 4).
+
 `obj.increment` the number to start the animation (default is 0).
+
 `obj.intervalAmount` how fast the frames are refreshed (default is 50, which is approx 24fps).
+
 `obj.strokeStyle01` the colour of the first half of the line (default is 'rgb(255, 0, 0)').
+
 `obj.strokeStyle02` the colour of the second half of the line (default is 'rgb(0, 255, 0)');
