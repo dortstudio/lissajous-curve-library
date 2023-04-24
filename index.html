@@ -44,7 +44,7 @@
         }
 
         .secondary {
-            color: #9b949b !important;
+            color: #56635B !important;
         }
 
         /* unvisited link */
@@ -138,21 +138,22 @@
             Lissajous curve examples.
         </p>
         <canvas id="dort-canvas-01"></canvas>
-        <br>
+        <p class="secondary">Example of 2 by 3 steps</p>
         <br>
         <canvas id="dort-canvas-02"></canvas>
-        <br>
+        <p class="secondary">Example of 3 by 4 steps</p>
         <br>
         <canvas id="dort-canvas-03"></canvas>
+        <p class="secondary">Example of 4 by 5 steps</p>
 
-        <script src="resources/scripts/dort-lissajous.js?cachebust=1351354" type="text/javascript"></script>
+        <script src="resources/scripts/dort-lissajous.js?ver=3" type="text/javascript"></script>
 
         <script>
 
             function loadedPageForCanvas() {
 
                 // initiate lissajous curves
-                
+
                 var curveObj01 = {};
                 curveObj01.xStep = 2;
                 curveObj01.yStep = 3;
