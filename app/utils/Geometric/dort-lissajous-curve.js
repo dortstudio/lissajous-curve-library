@@ -28,6 +28,7 @@ function initLissajousCurve(obj, canvas) {
     obj.hidpi = obj.hidpi || false;
     obj.canvasWidth = obj.canvasWidth || 400;
     obj.canvasHeight = obj.canvasHeight || 400;
+    obj.fullWidthOverride = obj.fullWidthOverride || false;
     obj.xMid = obj.xMid || obj.canvasWidth / 2;
     obj.yMid = obj.yMid || obj.canvasHeight / 2;
     obj.radius = obj.radius || 190;
@@ -37,20 +38,25 @@ function initLissajousCurve(obj, canvas) {
     obj.strokeStyle01 = obj.strokeStyle01 || 'rgb(255, 0, 0)';
     obj.strokeStyle02 = obj.strokeStyle02 || 'rgb(0, 255, 0)';
 
-    // retina is set via hidpi
-    if (obj.hidpi === false) {
+    // set canvas to 100% of container and scales height accordingly
+    if (obj.fullWidthOverride === false) {
         canvas.style.width = obj.canvasWidth + "px";
         canvas.style.height = obj.canvasHeight + "px";
+    } else {
+        canvas.style.width = "100%";
+        canvas.style.height = canvas.style.width;
+    }
+
+    // retina is set via hidpi
+    if (obj.hidpi === false) {
         canvas.width = obj.canvasWidth;
         canvas.height = obj.canvasHeight;
     } else {
-        canvas.width = obj.canvasWidth*2;
-        canvas.height = obj.canvasHeight*2;
-        obj.xCentre = obj.xCentre/2;
-        obj.yCentre = obj.yCentre/2;
-        canvas.style.width = "400px";
-        canvas.style.height = "400px";
-        ctx.scale(2,2);
+        canvas.width = obj.canvasWidth * 2;
+        canvas.height = obj.canvasHeight * 2;
+        obj.xCentre = obj.xCentre / 2;
+        obj.yCentre = obj.yCentre / 2;
+        ctx.scale(2, 2);
     }
 
     // sets interval (timer for FPS)
