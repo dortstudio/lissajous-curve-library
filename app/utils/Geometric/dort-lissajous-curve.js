@@ -26,6 +26,8 @@ function initLissajousCurve(obj, canvas) {
     obj.speed = obj.speed || 0.016;
     obj.n = obj.n || 50;
     obj.hidpi = obj.hidpi || false;
+    obj.oblong = obj.oblong || false;
+    obj.debug = obj.debug || false;
     obj.canvasWidth = obj.canvasWidth || 400;
     obj.canvasHeight = obj.canvasHeight || 400;
     obj.fullWidthOverride = obj.fullWidthOverride || false;
@@ -94,6 +96,12 @@ function drawLC(obj, canvas, ctx) {
         ctx.lineWidth = obj.lineWidth;
         ctx.stroke();
         ctx.closePath();
+
+        if(obj.debug === true) { 
+            obj.debugString = obj.debugString || "hello world";
+            ctx.font = "14px Arial";
+            ctx.fillText(obj.debugString, 0, 10);
+        }
 
     }
     obj.increment = obj.increment + obj.speed;

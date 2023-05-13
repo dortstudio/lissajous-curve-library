@@ -149,6 +149,12 @@
         <br>
         <canvas id="dort-canvas-03"></canvas>
         <p class="secondary">Example of 4 by 5 steps.</p>
+        <br>
+        <canvas id="dort-canvas-04"></canvas>
+        <p class="secondary">Example of 1 by 1 steps.</p>
+        <br>
+        <canvas id="dort-canvas-05"></canvas>
+        <p class="secondary">Example of 1 by 1 steps with oblong.</p>
 
         <script src="app/utils/Geometric/dort-lissajous-curve.js?ver=3" type="text/javascript"></script>
 
@@ -187,6 +193,28 @@
                 curveObj03.strokeStyle01 = 'rgb(21, 32, 35)';
                 curveObj03.strokeStyle02 = 'rgb(88, 188, 163)';
                 initLissajousCurve(curveObj03, document.getElementById('dort-canvas-03'));
+
+                var curveObj04 = {};
+                curveObj04.xStep = 1;
+                curveObj04.yStep = 1;
+                curveObj04.hidpi = true;
+                curveObj04.canvasWidth = 400;
+                curveObj04.canvasHeight = 400;
+                curveObj04.strokeStyle01 = 'rgb(21, 32, 35)';
+                curveObj04.strokeStyle02 = 'rgb(88, 188, 163)';
+                initLissajousCurve(curveObj04, document.getElementById('dort-canvas-04'));
+
+                var curveObj05 = {};
+                curveObj05.xStep = 1;
+                curveObj05.yStep = 1;
+                curveObj05.hidpi = true;
+                curveObj05.oblong = true;
+                curveObj05.debug = true;
+                curveObj05.canvasWidth = 400;
+                curveObj05.canvasHeight = 400;
+                curveObj05.strokeStyle01 = 'rgb(21, 32, 35)';
+                curveObj05.strokeStyle02 = 'rgb(88, 188, 163)';
+                initLissajousCurve(curveObj05, document.getElementById('dort-canvas-05'));
 
             }
 
