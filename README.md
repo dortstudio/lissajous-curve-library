@@ -79,4 +79,10 @@ This library is very flexible and settings can be defined depending on your proj
 
 `obj.strokeStyle01` the colour of the first half of the line (default is 'rgb(255, 0, 0)').
 
-`obj.strokeStyle02` the colour of the second half of the line (default is 'rgb(0, 255, 0)');
+`obj.strokeStyle02` the colour of the second half of the line (default is 'rgb(0, 255, 0)').
+
+`obj.oblong` makes the shape stretch wider when it is rolling through sizes (default is false).
+
+`obj.oblongRatio` if the obj.oblong setting is true then you can set how wide it is (default is 3, no change is 1).
+
+`obj.debug` adds a text field to top left and displays obj.debugString every loop (default is false).
