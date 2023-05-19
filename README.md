@@ -65,6 +65,8 @@ This library is very flexible and settings can be defined depending on your proj
 
 `obj.canvasHeight` the pixel height of a canvas (default is 400).
 
+`obj.fullWidthOverride` overrides the canvasWidth and makes the curve the full width of the containing div, then scales the height accordingly (default is false).
+
 `obj.xMid` the horizontal centre of the curve radius (defualt is the centre of the canvas).
 
 `obj.yMid` the vertical centre of the curve radius (defualt is the centre of the canvas).
