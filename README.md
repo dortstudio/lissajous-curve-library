@@ -71,7 +71,7 @@ This library is very flexible and settings can be defined depending on your proj
 
 `obj.yMid` the vertical centre of the curve radius (defualt is the centre of the canvas).
 
-`obj.radius` the size of the radius (default is 190).
+`obj.radius` the size of the radius (default is half width munus ten).
 
 `obj.lineWidth` the thickness of the line (default is 4).
 

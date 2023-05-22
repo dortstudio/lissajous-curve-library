@@ -31,7 +31,7 @@ function initLissajousCurve(obj, canvas) {
     obj.fullWidthOverride = obj.fullWidthOverride || false;
     obj.xMid = obj.xMid || obj.canvasWidth / 2;
     obj.yMid = obj.yMid || obj.canvasHeight / 2;
-    obj.radius = obj.radius || 190;
+    obj.radius = obj.radius || (obj.canvasWidth / 2)-10;
     obj.lineWidth = obj.lineWidth || 4;
     obj.increment = obj.increment || 0;
     obj.intervalAmount = obj.intervalAmount || 50;
@@ -117,7 +117,7 @@ function drawLC(obj, canvas, ctx) {
         // adds debug text to top left
         if (obj.debug === true) {
             if (j === 0) {
-                obj.debugString = oblongOffset;
+                obj.debugString = obj.radius;
             }
             obj.debugString = obj.debugString || "hello world";
             ctx.font = "14px Arial";
